@@ -4,6 +4,7 @@
  *
  * @package inhabitent_Theme
  */
+
 get_header(); ?>
 <div class="page-content">
 

@@ -10,101 +10,102 @@ get_header(); ?>
 	<div id="primary" class="content-area-front">
 		<main id="main" class="site-main" role="main">
 
-			<!-- Hero Image -->
+		<!-- Hero Image -->
 
 				<section class="home-hero">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-full.svg" class="logo" alt="Inhabitent Logo" />
-				</section>
+				</section><!-- .home-hero -->
 
-			<!-- Shop Stuff -->
-			<h2>Shop Stuff</h2>
-				<section class="shop-stuff">
-					<?php $terms = get_terms('product-type')?>
-						<?php foreach ( $terms as $product_type) : ?>
-						<div class="product-block">
-							<img src="<?php echo get_template_directory_uri() ?>/images/icons/<?php echo $product_type->slug ?>.svg" alt="product-type" />
-							<p class="description"><?php echo $product_type->description ?></p>
-							<a href="<?php echo get_term_link($product_type, 'product-type') ?>/" class="button"><?php echo $product_type->slug ?> Stuff</a>
+				<!-- Shop Stuff -->
+				<h2>Shop Stuff</h2>
+					<section class="shop-stuff">
+						<?php $terms = get_terms('product-type')?>
+							<?php foreach ( $terms as $product_type) : ?>
+							<div class="product-block">
+								<img src="<?php echo get_template_directory_uri() ?>/images/icons/<?php echo $product_type->slug ?>.svg" alt="product-type" />
+								<p class="description"><?php echo $product_type->description ?></p>
+								<a href="<?php echo get_term_link($product_type, 'product-type') ?>/" class="button"><?php echo $product_type->slug ?> Stuff</a>
 
-					</div>
-        <?php endforeach; ?>
+						</div>
+					<?php endforeach; ?>
 
-				</section>
+					</section>
 
 
-			<!-- Inhabitent Journal -->
+		<!-- Inhabitent Journal -->
 
 			<h2>Inhabitent Journal</h2>
 			<ul class="journal-post container">
-			<?php
-				$args = array( 'posts_per_page' => 3, 'order'=> 'DESC', 'orderby' => 'date' );
-				$postslist = get_posts( $args );
-				foreach ( $postslist as $post ) :
-				setup_postdata( $post ); ?>
-
-						<li >
-							<div class="journal-picture">
-								<?php the_post_thumbnail( 'large' ); ?>
-							</div>
-
-							<div class="journal-info">
-								<span>
-									<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-								</span>
-								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<a class="moretag" href="<?php the_permalink(); ?>">Read Entry</a>
-							</div>
-
-
-						</li>
 				<?php
-				endforeach;
-				wp_reset_postdata();
-				?>
-				</ul>
+					$args = array(
+						'posts_per_page' => 3,
+						'order'=> 'DESC',
+						'orderby' => 'date' );
+					$postslist = get_posts( $args );
+					foreach ( $postslist as $post ) :
+					setup_postdata( $post ) ; ?>
 
-			<!-- Latest Adventures -->
+							<li >
+								<div class="journal-picture">
+									<?php the_post_thumbnail( 'large' ); ?>
+								</div>
 
-				<section class="adventures container">
-					<h2>Latest Adventures</h2>
-					<ul class="clearfix">
-						<li>
-							<div class="story-wrap canoe">
-								<div class="story-info">
-									<h3><a href="#">Getting Back to Nature in a Canoe</a></h3>
-									<a href="#" class="readtag">Read More</a>
+								<div class="journal-info">
+									<span>
+										<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+									</span>
+									<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+									<a class="moretag" href="<?php the_permalink(); ?>">Read Entry</a>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="story-wrap bonfire">
-								<div class="story-info">
-									<h3><a href="#">A Night with Friends at the Beach</a></h3>
-									<a href="#" class="readtag">Read More</a>
+
+							</li>
+					<?php endforeach;
+								wp_reset_postdata(); ?>
+
+				</ul><!-- .journal-post -->
+
+				<!-- Latest Adventures -->
+
+					<section class="adventures container">
+						<h2>Latest Adventures</h2>
+						<ul class="clearfix">
+							<li>
+								<div class="story-wrap canoe">
+									<div class="story-info">
+										<h3><a href="#">Getting Back to Nature in a Canoe</a></h3>
+										<a href="#" class="readtag">Read More</a>
+									</div>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="story-wrap hikers">
-								<div class="story-info">
-									<h3><a href="#">Taking in the View at Big Mountain</a></h3>
-									<a href="#" class="readtag">Read More</a>
+							</li>
+							<li>
+								<div class="story-wrap bonfire">
+									<div class="story-info">
+										<h3><a href="#">A Night with Friends at the Beach</a></h3>
+										<a href="#" class="readtag">Read More</a>
+									</div>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="story-wrap night-sky">
-								<div class="story-info">
-									<h3><a href="#">Star-Gazing at the Night Sky</a></h3>
-									<a href="#" class="readtag">Read More</a>
+							</li>
+							<li>
+								<div class="story-wrap hikers">
+									<div class="story-info">
+										<h3><a href="#">Taking in the View at Big Mountain</a></h3>
+										<a href="#" class="readtag">Read More</a>
+									</div>
 								</div>
-							</div>
-						</li>
-					</ul>
-					<p class="clearfix">
-						<a href="#" class="button">More Adventures</a>
-					</p>
-				</section>
+							</li>
+							<li>
+								<div class="story-wrap night-sky">
+									<div class="story-info">
+										<h3><a href="#">Star-Gazing at the Night Sky</a></h3>
+										<a href="#" class="readtag">Read More</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<p class="clearfix">
+							<a href="#" class="button">More Adventures</a>
+						</p>
+					</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

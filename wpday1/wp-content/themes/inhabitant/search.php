@@ -6,9 +6,11 @@
  */
 
 get_header(); ?>
+<div class="search-whole-page container">
+
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main " role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -31,8 +33,13 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+
+
 		</main><!-- #main -->
+
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+</div><!-- .search-whole-page -->
+
 <?php get_footer(); ?>

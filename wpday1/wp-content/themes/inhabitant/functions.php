@@ -1,6 +1,6 @@
 <?php
 /**
- * RED Starter Theme functions and definitions.
+ * Inhabitent Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -82,10 +82,21 @@ add_filter( 'stylesheet_uri', 'inhabitent_minified_css', 10, 2 );
 /**
  * Enqueue scripts and styles.
  */
+ 
 function inhabitent_scripts() {
 	wp_enqueue_style( 'inhabitent-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'inhabitent-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+
+	wp_enqueue_script('jquery');
+
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+	wp_enqueue_script( 'inhabitent-search-bar', get_template_directory_uri() . '/build/js/search-bar.min.js', array('jquery'), false, true );
+
+	if (is_front_page() || is_page_template( 'about.php' ) || is_singular( 'adventure' )) {
+		wp_enqueue_script('inhabitent-sticky-header', get_template_directory_uri() . '/build/js/sticky-header.min.js', array('jquery'), false, true );
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

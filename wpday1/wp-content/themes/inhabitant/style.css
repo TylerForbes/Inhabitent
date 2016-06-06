@@ -1,17 +1,21 @@
 /*!
 Theme Name: Inhabitent Theme
 Theme URI: http://underscores.me/
-Author: Tyler Forbes
+Author: Kurtis Young
 Author URI: http://www.redacademy.com
 Description: A WordPress starter theme by a RED Academy student.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
+
+
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
+
 RED Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
+
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
@@ -226,6 +230,8 @@ select,
 textarea {
   color: #404040;
   font-family: "merriweather", serif;
+  font-weight: normal;
+  font-style: normal;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.75; }
@@ -233,7 +239,7 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
@@ -252,7 +258,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -299,15 +305,15 @@ big {
   font-style: normal; }
 
 @font-face {
-  font-family: 'Novovento Sans Web';
-  src: url("../../fonts/novocento/novocentosanswide-normal-webfont.woff2") format("woff2"), url("../../fonts/novocento/novocentosanswide-normal-webfont.woff") format("woff"), url("../../fonts/novocento/novocentosanswide-normal-webfont.svg") format("svg"), url("../../fonts/novocento/novocentosanswide-normal-webfont.ttf") format("ttf") url("../../fonts/novocento/novocentosanswide-normal-webfont.eot") format("eot");
+  font-family: 'novocento';
+  src: url("../../fonts/novocento/novecentosanswide-normal-webfont.woff2") format("woff2"), url("../../fonts/novocento/novocentosanswide-normal-webfont.woff") format("woff"), url("../../fonts/novocento/novocentosanswide-normal-webfont.svg") format("svg"), url("../../fonts/novocento/novocentosanswide-normal-webfont.ttf") format("ttf"), url("../../fonts/novocento/novocentosanswide-normal-webfont.eot") format("eot");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Novovento Sans Web';
-  src: url("../../fonts/novocento/novocentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.svg") format("svg"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.ttf") format("ttf") url("../../fonts/novocento/novocentosanswide-demibold-webfont.eot") format("eot");
-  font-weight: normal;
+  font-family: 'novocento';
+  src: url("../../fonts/novocento/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.svg") format("svg"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.ttf") format("ttf"), url("../../fonts/novocento/novocentosanswide-demibold-webfont.eot") format("eot");
+  font-weight: bold;
   font-style: normal; }
 
 /*--------------------------------------------------------------
@@ -429,30 +435,38 @@ object {
 .gallery-caption {
   display: block; }
 
+/* Navigation Bar */
 .home .site-header, .page-template-about .site-header, .single-adventure .site-header {
-  height: 50px;
   background-color: transparent;
   border-bottom: 0;
   text-shadow: 1px 1px 2px #323232;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: absolute;
-  padding: 0 0 0 150px; }
-  .home .site-header a, .page-template-about .site-header a, .single-adventure .site-header a {
+  position: absolute; }
+  .home .site-header a, .home .site-header i, .page-template-about .site-header a, .page-template-about .site-header i, .single-adventure .site-header a, .single-adventure .site-header i {
     color: white;
     padding: 4px; }
-    .home .site-header a:hover, .page-template-about .site-header a:hover, .single-adventure .site-header a:hover {
+    .home .site-header a:hover, .home .site-header i:hover, .page-template-about .site-header a:hover, .page-template-about .site-header i:hover, .single-adventure .site-header a:hover, .single-adventure .site-header i:hover {
+      color: #f0e4d1; }
+    .home .site-header a:visited, .home .site-header i:visited, .page-template-about .site-header a:visited, .page-template-about .site-header i:visited, .single-adventure .site-header a:visited, .single-adventure .site-header i:visited {
       color: white; }
-    .home .site-header a:visited, .page-template-about .site-header a:visited, .single-adventure .site-header a:visited {
-      color: white; }
-      .home .site-header a:visited:hover, .page-template-about .site-header a:visited:hover, .single-adventure .site-header a:visited:hover {
-        color: white; }
+      .home .site-header a:visited:hover, .home .site-header i:visited:hover, .page-template-about .site-header a:visited:hover, .page-template-about .site-header i:visited:hover, .single-adventure .site-header a:visited:hover, .single-adventure .site-header i:visited:hover {
+        color: #f0e4d1; }
+  .home .site-header input[type=search], .page-template-about .site-header input[type=search], .single-adventure .site-header input[type=search] {
+    color: white; }
+  .home .site-header ::-webkit-input-placeholder, .page-template-about .site-header ::-webkit-input-placeholder, .single-adventure .site-header ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #f0e4d1; }
+  .home .site-header :-moz-placeholder, .page-template-about .site-header :-moz-placeholder, .single-adventure .site-header :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #f0e4d1; }
+  .home .site-header ::-moz-placeholder, .page-template-about .site-header ::-moz-placeholder, .single-adventure .site-header ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #f0e4d1; }
+  .home .site-header :-ms-input-placeholder, .page-template-about .site-header :-ms-input-placeholder, .single-adventure .site-header :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0e4d1; }
 
 .site-header {
   height: 50px;
-  border-bottom: 0;
   position: fixed;
   display: -ms-flexbox;
   display: flex;
@@ -463,15 +477,30 @@ object {
   width: 100%;
   background: rgba(255, 255, 255, 0.74);
   border-bottom: 1px solid #e1e1e1; }
-  .site-header a {
+  .site-header a, .site-header i {
     color: #248a83;
     padding: 4px; }
-    .site-header a:hover {
+    .site-header a:hover, .site-header i:hover {
       color: #2f1339; }
-    .site-header a:visited {
+    .site-header a:visited, .site-header i:visited {
       color: #248a83; }
-      .site-header a:visited:hover {
+      .site-header a:visited:hover, .site-header i:visited:hover {
         color: #2f1339; }
+  .site-header .fa-search {
+    line-height: 1.5;
+    margin-right: 5px;
+    cursor: pointer; }
+  .site-header input[type=search] {
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'novocento', sans-serif;
+    border: 0;
+    outline: none;
+    width: 200px;
+    display: none; }
+  .site-header fieldset {
+    margin: 0;
+    padding: 0; }
 
 .site-header-fixed {
   height: 50px;
@@ -486,26 +515,31 @@ object {
   width: 100%;
   background: rgba(255, 255, 255, 0.74);
   border-bottom: 1px solid #e1e1e1; }
-  .site-header-fixed a {
+  .site-header-fixed a, .site-header-fixed i {
     color: #248a83;
     padding: 4px; }
-    .site-header-fixed a:hover {
+    .site-header-fixed a:hover, .site-header-fixed i:hover {
       color: #2f1339; }
-    .site-header-fixed a:visited {
+    .site-header-fixed a:visited, .site-header-fixed i:visited {
       color: #248a83; }
-      .site-header-fixed a:visited:hover {
+      .site-header-fixed a:visited:hover, .site-header-fixed i:visited:hover {
         color: #2f1339; }
-  .site-header-fixed .site-title-fixed {
-    background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
-    background-size: 50px;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    text-indent: 100%;
+  .site-header-fixed .fa-search {
+    line-height: 1.5;
+    margin-right: 5px;
+    cursor: pointer; }
+  .site-header-fixed input[type=search] {
+    background: transparent;
+    color: #f0e4d1;
+    text-transform: uppercase;
+    font-family: 'novocento', sans-serif;
+    border: 0;
+    outline: none;
+    width: 200px;
+    display: none; }
+  .site-header-fixed fieldset {
     margin: 0;
-    position: absolute;
-    top: 10px;
-    left: 150px; }
+    padding: 0; }
 
 .home .site-title, .page-template-about .site-title, .single-adventure .site-title {
   background: url(../../images/logos/inhabitent-logo-tent-white.svg) no-repeat;
@@ -516,7 +550,7 @@ object {
   text-indent: 100%;
   margin: 0;
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 150px; }
 
 .site-title {
@@ -528,7 +562,19 @@ object {
   text-indent: 100%;
   margin: 0;
   position: absolute;
-  top: 10px;
+  top: 5px;
+  left: 150px; }
+
+.site-title-fixed {
+  background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 50px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-indent: 100%;
+  margin: 0;
+  position: absolute;
+  top: 5px;
   left: 150px; }
 
 .header-bar {
@@ -572,6 +618,7 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+/* Comments */
 .comments-title {
   line-height: 1.25;
   font-size: 2rem;
@@ -644,12 +691,12 @@ input[type=email], input[type=password], input[type=search], input[type=text], i
 
 label {
   text-transform: uppercase;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   font-size: 1.1rem; }
 
 input[type=submit] {
   padding: 12.5px 25px;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   color: white;
   font-size: 0.9rem;
@@ -697,7 +744,7 @@ a {
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  font-family: 'Novecento Sans Web',sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase; }
   .main-navigation ul {
     display: none;
@@ -913,6 +960,7 @@ a {
 .bypostauthor {
   display: block; }
 
+/* Footer */
 .site-footer {
   background: url(../../images/dark-wood.png);
   background-size: 350px 512px;
@@ -950,7 +998,7 @@ a {
   margin-left: 250px; }
 
 .site-info {
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: white;
@@ -982,6 +1030,7 @@ a {
 .logo {
   height: 275px; }
 
+/* Shop Stuff */
 .shop-stuff {
   display: -ms-flexbox;
   display: flex;
@@ -1001,6 +1050,7 @@ a {
     height: 70px;
     width: auto; }
 
+/* Journal Post */
 .journal-post {
   list-style: none;
   padding-left: 0;
@@ -1035,6 +1085,7 @@ a {
         .journal-post .journal-info h3 a:hover {
           color: #2f1339; }
 
+/* Latest Adventures */
 .adventures {
   margin-bottom: 70px; }
   .adventures h3 a {
@@ -1049,6 +1100,13 @@ a {
     padding-top: 40px; }
   .adventures a {
     text-decoration: none; }
+  .adventures img {
+    max-height: 620px;
+    max-width: none;
+    width: auto;
+    z-index: -1;
+    position: relative;
+    display: block; }
   .adventures ul {
     list-style: none;
     display: inline;
@@ -1065,48 +1123,34 @@ a {
     .adventures ul li:nth-child(2) {
       width: 49%;
       float: right; }
+      .adventures ul li:nth-child(2) img {
+        height: 300px;
+        width: 100%; }
       .adventures ul li:nth-child(2) h3 a {
         font-size: 2.25rem;
         line-height: 1; }
-    .adventures ul li:nth-child(3) {
+    .adventures ul li:nth-child(3), .adventures ul li:last-child {
       width: 24%;
       float: right;
       margin-left: 1%;
       margin-top: 1.75%;
       font-size: 1rem; }
-      .adventures ul li:nth-child(3) h3 a {
+      .adventures ul li:nth-child(3) img, .adventures ul li:last-child img {
+        height: 300px; }
+      .adventures ul li:nth-child(3) h3 a, .adventures ul li:last-child h3 a {
         font-size: 1.5rem;
         line-height: 1; }
-    .adventures ul li:last-child {
-      width: 24%;
-      float: right;
-      margin-top: 1.75%; }
-      .adventures ul li:last-child h3 a {
-        font-size: 1.5rem;
-        line-height: 1; }
-
-.canoe {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../../images/adventure/canoe-girl.jpg) no-repeat center center;
-  background-size: cover, cover;
-  height: 620px; }
-
-.bonfire {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../../images/adventure/beach-bonfire.jpg) no-repeat center center;
-  background-size: cover, cover;
-  height: 300px; }
-
-.hikers {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../../images/adventure/mountain-hikers.jpg) no-repeat center center;
-  background-size: cover, cover;
-  height: 300px; }
-
-.night-sky {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../../images/adventure/night-sky.jpg) no-repeat center center;
-  background-size: cover, cover;
-  height: 300px; }
 
 .story-wrap {
-  position: relative; }
+  position: relative;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .story-wrap .adventure-image {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+    padding: 0; }
   .story-wrap .story-info {
     position: absolute;
     top: 0;
@@ -1116,7 +1160,7 @@ a {
 .readtag {
   border: 1px solid white;
   padding: 12.5px 25px;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   color: white;
   font-size: 0.9rem; }
@@ -1134,7 +1178,7 @@ a {
 
 .button {
   padding: 12.5px 25px;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   color: white;
   font-size: 1.1rem;
@@ -1147,6 +1191,7 @@ a {
     .button:visited:hover {
       color: white; }
 
+/* Header of Shop Page */
 .product-links {
   list-style: none;
   display: -ms-flexbox;
@@ -1156,12 +1201,15 @@ a {
   .product-links li {
     padding: 10px 30px;
     font-size: 1.2rem;
-    font-family: "Novovento Sans Web", sans-serif;
+    font-family: "novocento", sans-serif;
     font-weight: normal;
     text-transform: uppercase; }
     .product-links li a {
       color: #248a83; }
+      .product-links li a:hover {
+        color: #2f1339; }
 
+/* Product Grid Area */
 .product-area {
   width: 1120px;
   padding-top: 20px;
@@ -1189,7 +1237,7 @@ a {
     display: flex;
     padding-left: 0;
     margin-left: 0;
-    font-family: "Novovento Sans Web", sans-serif;
+    font-family: "novocento", sans-serif;
     font-size: 1.2rem; }
     .product-header .product-list li {
       padding: 0 25px; }
@@ -1231,9 +1279,11 @@ a {
   .product-grid .product-price {
     padding-left: 2px; }
 
+/* Product Category Page */
 .product-tax-page {
   text-align: center; }
 
+/* Single Product Page */
 .single-product-content .type-product {
   display: -ms-flexbox;
   display: flex; }
@@ -1249,7 +1299,7 @@ a {
     color: #d99054; }
   .single-product-content .entry-content .price {
     font-size: 1.5rem;
-    font-family: "Novovento Sans Web", sans-serif; }
+    font-family: "novocento", sans-serif; }
 
 .single-product-content .moretag {
   margin-top: 0; }
@@ -1291,7 +1341,7 @@ a {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   padding: 2.5px 20px;
   font-size: 0.9rem; }
@@ -1302,7 +1352,7 @@ a {
 .moretag {
   border: 1px solid black;
   padding: 12.5px 25px;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   text-transform: uppercase;
   color: black;
   font-size: 0.9rem; }
@@ -1327,7 +1377,7 @@ a {
 
 .cat-links, .tags-links {
   text-transform: uppercase;
-  font-family: "Novovento Sans Web", sans-serif; }
+  font-family: "novocento", sans-serif; }
   .cat-links a, .tags-links a {
     color: #248a83; }
     .cat-links a:hover, .tags-links a:hover {
@@ -1341,6 +1391,7 @@ a {
   padding: 5px 30px;
   margin-top: 30px; }
 
+/* About Page */
 .about-header {
   display: -ms-flexbox;
   display: flex;
@@ -1349,7 +1400,7 @@ a {
   -ms-flex-align: center;
       align-items: center;
   height: 100vh; }
-  .about-header h1 {
+  .about-header h2 {
     color: white;
     font-size: 3rem; }
 
@@ -1366,6 +1417,7 @@ a {
     font-size: 2rem;
     color: #2f1339; }
 
+/* Find Us Page */
 .status-publish h1 {
   font-size: 2.5rem; }
 
@@ -1375,7 +1427,7 @@ a {
 
 .wpcf7-form label {
   text-transform: uppercase;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   font-size: 1.1rem;
   font-weight: normal; }
 
@@ -1391,32 +1443,11 @@ a {
   font-size: .9rem;
   padding: 8px 22.5px; }
 
-.error-whole-page {
-  display: -ms-flexbox;
-  display: flex; }
-
-.error-404 .error-content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  width: 73%; }
-  .error-404 .error-content a:visited {
-    color: #248a83; }
-    .error-404 .error-content a:visited:hover {
-      color: #2f1339; }
-  .error-404 .error-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0; }
-
-.search-form fieldset {
-  border: 0; }
-
+/* Single Adventure Page */
 .adventure-single .adventure-header .entry-title {
   margin-bottom: 0; }
 
-.adventure-single .adventure-header h1 {
+.adventure-single .adventure-header h2 {
   font-size: 2.3rem; }
 
 .adventure-single .adventure-header div {
@@ -1425,7 +1456,7 @@ a {
 
 .adventure-single .adventure-header span {
   text-transform: uppercase;
-  font-family: "Novovento Sans Web", sans-serif;
+  font-family: "novocento", sans-serif;
   font-size: 1.1rem; }
 
 .adventure-single .entry-content {
@@ -1437,6 +1468,7 @@ a {
   margin-top: 0;
   margin-bottom: 50px; }
 
+/* Archive Adventure */
 .adventure-grid {
   display: -ms-flexbox;
   display: flex;
@@ -1467,3 +1499,82 @@ a {
       font-weight: normal; }
       .adventure-grid-item .adventure-info h3 a:hover {
         color: #f0e4d1; }
+
+/* Error 404 Page */
+.error-whole-page {
+  display: -ms-flexbox;
+  display: flex; }
+
+.error-404 .error-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 73%; }
+  .error-404 .error-content a:visited {
+    color: #248a83; }
+    .error-404 .error-content a:visited:hover {
+      color: #2f1339; }
+  .error-404 .error-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0; }
+
+.search-form fieldset {
+  border: 0; }
+
+/* Search Page */
+.search-whole-page {
+  display: -ms-flexbox;
+  display: flex; }
+
+.search .page-title {
+  font-size: 2.25rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 20px; }
+
+.search .site-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.search a:visited {
+  color: #248a83; }
+  .search a:visited:hover {
+    color: #2f1339; }
+
+.search ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0; }
+
+.search .search-form fieldset {
+  border: 0; }
+
+.search .entry-title {
+  position: relative;
+  background: none;
+  padding: 0;
+  max-width: 100%; }
+
+.search .entry-meta {
+  background: none;
+  color: black;
+  position: relative;
+  padding: 0; }
+
+.search .readmore {
+  margin-bottom: 30px; }
+
+.search .moretag {
+  color: black; }
+  .search .moretag:visited {
+    color: black; }
+  .search .moretag:hover {
+    color: white; }
+    .search .moretag:hover:visited {
+      color: white; }
+
+.search .page-content {
+  padding-top: 10px; }

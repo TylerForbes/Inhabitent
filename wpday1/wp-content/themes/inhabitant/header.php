@@ -4,6 +4,7 @@
  *
  * @package inhabitent_Theme
  */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -12,7 +13,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-	<?php wp_head(); ?>
+		<?php wp_head(); ?>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -31,10 +32,12 @@
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 						<i class="fa fa-search"></i>
-						<?php get_search_form(); ?>
+						<div class="nav-search">
+							<?php get_search_form(); ?>
+						</div>
 					</nav><!-- #site-navigation -->
 
-				</div>
+				</div><!-- .header-bar -->
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content">
+	<div id="content" class="site-content">
