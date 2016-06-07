@@ -20,17 +20,13 @@ get_header(); ?>
 				?>
 
 				<ul class="product-links">
-					<?php $terms = get_terms(
-						array(
-						'taxonomy' => 'product_type',
-						'hide_empty' => false,) );
-
-						foreach ( $terms as $product_type) : ?>
+					<?php $terms = get_terms('product-type')?>
+						<?php foreach ( $terms as $product_type) : ?>
 							<li>
-								<a href="<?php home_url(); ?>/product-type/<?php echo $product_type->slug; ?>"><?php echo $product_type->name; ?></a>
+								<a href="<?php echo get_term_link($product_type, 'product-type') ?>/"><?php echo $product_type->slug ?></a>
 							</li>
 					<?php endforeach; ?>
-				</ul><!-- .product-links -->
+				</ul>
 			</header><!-- .product-header -->
 
 			<div class="product-grid">
