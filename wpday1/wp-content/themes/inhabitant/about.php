@@ -4,7 +4,6 @@
  *
  * @package inhabitent_Theme
  */
-
 get_header(); ?>
 <div class="about-content">
 
@@ -23,7 +22,7 @@ get_header(); ?>
 					<h2 class="about-title">Our Team</h2>
 						<?php echo CFS()->get( 'our_team' ); ?>
 				</div><!-- .about-paragraphs -->
-				
+
 			</section><!-- .about-container -->
 
 		</main><!-- #main -->
