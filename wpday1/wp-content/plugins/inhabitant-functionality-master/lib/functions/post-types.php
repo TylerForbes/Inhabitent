@@ -60,17 +60,16 @@ function tent_register_product_cpt() {
 
 }
 add_action( 'init', 'tent_register_product_cpt', 0 );
-
-
-function tent_register_adventure_cpt() {
+// Adventure Post Type
+function inhabitent_adventure_post() {
 
 	$labels = array(
-		'name'                  => 'Adventure',
+		'name'                  => 'Adventures',
 		'singular_name'         => 'Adventure',
-		'menu_name'             => 'Adventure',
+		'menu_name'             => 'Aventures',
 		'name_admin_bar'        => 'Adventure',
 		'archives'              => 'Adventure Archives',
-		'parent_item_colon'     => 'Parent adventure:',
+		'parent_item_colon'     => 'Parent Adventure:',
 		'all_items'             => 'All Adventures',
 		'add_new_item'          => 'Add New Adventure',
 		'add_new'               => 'Add New',
@@ -81,27 +80,28 @@ function tent_register_adventure_cpt() {
 		'search_items'          => 'Search Adventure',
 		'not_found'             => 'Not found',
 		'not_found_in_trash'    => 'Not found in Trash',
-		'featured_image'        => 'Featured Adventure Image',
-		'set_featured_image'    => 'Set featured adventure image',
-		'remove_featured_image' => 'Remove featured adventure image',
-		'use_featured_image'    => 'Use as featured adventure image',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
 		'insert_into_item'      => 'Insert into adventure',
-		'uploaded_to_this_item' => 'Uploaded to this Adventure',
+		'uploaded_to_this_item' => 'Uploaded to this adventure',
 		'items_list'            => 'Adventures list',
 		'items_list_navigation' => 'Adventures list navigation',
 		'filter_items_list'     => 'Filter adventures list',
 	);
 	$args = array(
 		'label'                 => 'Adventure',
-		'description'           => 'The adventures for the Inhabitant site',
+		'description'           => 'for adventure posts',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', ),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-flag',
+		'menu_position'         => 10,
+		'menu_icon'             => 'dashicons-admin-site',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -110,7 +110,7 @@ function tent_register_adventure_cpt() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'Adventure', $args );
+	register_post_type( 'adventure', $args );
 
 }
-add_action( 'init', 'tent_register_adventure_cpt', 0 );
+add_action( 'init', 'inhabitent_adventure_post', 0 );

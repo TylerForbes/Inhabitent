@@ -66,46 +66,39 @@ get_header(); ?>
 
 				<!-- Latest Adventures -->
 
-					<section class="adventures container">
-						<h2>Latest Adventures</h2>
-						<ul class="clearfix">
-							<li>
-								<div class="story-wrap canoe">
-									<div class="story-info">
-										<h3><a href="#">Getting Back to Nature in a Canoe</a></h3>
-										<a href="#" class="readtag">Read More</a>
-									</div>
+			<h2>Latest Adventures</h2>
+			<section class="adventures container">
+
+				<ul class="clearfix">
+
+					<?php
+						$query = new WP_Query( array(
+							'post_type' => 'adventure',
+						 	'order' => 'ASC',
+							'orderby' => 'date',
+							'posts_per_page' => 4)
+						);
+						while ( $query->have_posts() ) : $query->the_post(); ?>
+
+						<li>
+							<div class="story-wrap">
+								<div class="adventure-image">
+									<?php the_post_thumbnail( 'full' ); ?>
 								</div>
-							</li>
-							<li>
-								<div class="story-wrap bonfire">
-									<div class="story-info">
-										<h3><a href="#">A Night with Friends at the Beach</a></h3>
-										<a href="#" class="readtag">Read More</a>
-									</div>
+								<div class="story-info">
+									<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+									<a class="readtag" href="<?php the_permalink(); ?>">Read More</a>
 								</div>
-							</li>
-							<li>
-								<div class="story-wrap hikers">
-									<div class="story-info">
-										<h3><a href="#">Taking in the View at Big Mountain</a></h3>
-										<a href="#" class="readtag">Read More</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="story-wrap night-sky">
-									<div class="story-info">
-										<h3><a href="#">Star-Gazing at the Night Sky</a></h3>
-										<a href="#" class="readtag">Read More</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<p class="clearfix">
-							<a href="#" class="button">More Adventures</a>
-						</p>
-					</section>
+							</div>
+						</li>
+
+					<?php endwhile;
+										wp_reset_postdata(); ?>
+				</ul>
+				<p class="clearfix">
+					<a href="/adventures" class="button">More Adventures</a>
+				</p>
+			</section><!-- .adventures -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
