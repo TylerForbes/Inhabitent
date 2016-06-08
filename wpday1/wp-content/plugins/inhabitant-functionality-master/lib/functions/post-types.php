@@ -60,13 +60,14 @@ function tent_register_product_cpt() {
 
 }
 add_action( 'init', 'tent_register_product_cpt', 0 );
+
 // Adventure Post Type
 function inhabitent_adventure_post() {
 
 	$labels = array(
 		'name'                  => 'Adventures',
 		'singular_name'         => 'Adventure',
-		'menu_name'             => 'Aventures',
+		'menu_name'             => 'Adventures',
 		'name_admin_bar'        => 'Adventure',
 		'archives'              => 'Adventure Archives',
 		'parent_item_colon'     => 'Parent Adventure:',

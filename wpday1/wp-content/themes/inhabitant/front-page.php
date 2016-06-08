@@ -96,7 +96,7 @@ get_header(); ?>
 										wp_reset_postdata(); ?>
 				</ul>
 				<p class="clearfix">
-					<a href="/wpday1/adventures" class="button">More Adventures</a>
+					<a href="adventures" class="button">More Adventures</a>
 				</p>
 			</section><!-- .adventures -->
 
